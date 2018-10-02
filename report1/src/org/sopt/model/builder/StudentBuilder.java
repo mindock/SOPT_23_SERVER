@@ -8,7 +8,6 @@ public class StudentBuilder {
     private Long studentNo;
     private String name;
     private int grade;
-    private Department department;
     private String email;
     private String address;
     private int age;
@@ -26,11 +25,6 @@ public class StudentBuilder {
 
     public StudentBuilder setGrade(int grade) {
         this.grade = grade;
-        return this;
-    }
-
-    public StudentBuilder setDepartment(Department department) {
-        this.department = department;
         return this;
     }
 
@@ -55,6 +49,6 @@ public class StudentBuilder {
     }
 
     public Student build() {
-        return new Student(this.studentNo, this.name, this.grade, this.department, this.email, this.address, this.age, this.status);
+        return new Student(this.studentNo, this.name, this.grade, this.email, this.address, this.age, this.status);
     }
 }

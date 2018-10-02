@@ -7,7 +7,6 @@ public class ProfessorBuilder {
 
     private Long professorNo;
     private String name;
-    private Department department;
     private String phoneNo;
     private String subject;
 
@@ -18,11 +17,6 @@ public class ProfessorBuilder {
 
     public ProfessorBuilder setName(String name) {
         this.name = name;
-        return this;
-    }
-
-    public ProfessorBuilder setDepartment(Department department) {
-        this.department = department;
         return this;
     }
 
@@ -37,6 +31,6 @@ public class ProfessorBuilder {
     }
 
     public Professor build() {
-        return new Professor(this.professorNo, this.name, this.department, this.phoneNo, this.subject);
+        return new Professor(this.professorNo, this.name, this.phoneNo, this.subject);
     }
 }

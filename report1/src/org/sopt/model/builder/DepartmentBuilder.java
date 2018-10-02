@@ -9,7 +9,6 @@ public class DepartmentBuilder {
     private String name;
     private String phoneNo;
     private String type;
-    private University university;
 
     public DepartmentBuilder setDepartmentNo(Long departmentNo) {
         this.departmentNo = departmentNo;
@@ -31,12 +30,7 @@ public class DepartmentBuilder {
         return this;
     }
 
-    public DepartmentBuilder setUniversity(University university) {
-        this.university = university;
-        return this;
-    }
-
     public Department build() {
-        return new Department(this.departmentNo, this.name, this.phoneNo, this.type, this.university);
+        return new Department(this.departmentNo, this.name, this.phoneNo, this.type);
     }
 }
