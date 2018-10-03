@@ -6,9 +6,9 @@ import org.sopt.service.UniversityService;
 
 public class UniversityServiceImpl implements UniversityService {
     @Override
-    public University getUniversityByUniversityNo(Long universityNo) {
+    public University getUniversityByUniversityName(String universityName) {
         return new UniversityBuilder()
-                .setUniversityNo(universityNo)
+                .setName(universityName)
                 .build();
     }
 }

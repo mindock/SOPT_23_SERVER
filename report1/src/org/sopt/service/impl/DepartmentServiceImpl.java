@@ -7,9 +7,9 @@ import org.sopt.service.DepartmentService;
 public class DepartmentServiceImpl implements DepartmentService {
 
     @Override
-    public Department getDepartmentByDepartmentNo(Long departmentNo) {
+    public Department getDepartmentByName(String departmentName) {
         return new DepartmentBuilder()
-                .setDepartmentNo(departmentNo)
+                .setName(departmentName)
                 .build();
     }
 }
